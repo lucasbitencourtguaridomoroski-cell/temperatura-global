@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperatura Global</title>
+
+    <!-- Biblioteca CSS JavaScript Chart.js -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <!-- Conteúdo da página -->
+
+  <body>
+    <div class="tittle">
+      <h1>Temperatura Global</h1>
+    </div>
+
+    <div class="subtitle">
+      </p>
+    <p>Dados reais da NASA mostrando a variação da temperatura global ao longo
+      dos anos.</p>
+    </div>
+
+    <div class="filter">
+      <label>Selecione o Ano:</label>
+      <input type="range" id="rangeAno" min="1880" max="2019" value="2019" />
+      <span id="anoSelecionado">2019</span>
+    </div>
+
+    <div class="container">
+      <div class="card"><canvas id="GraficoLinha"></canvas></div>
+      <div class="card"><canvas id="GraficoBarra"></canvas></div>
+      <div class="card"><canvas id="GraficosMensal"></canvas></div>
+    </div>
+<br>
+
+    <div class="documentacao">
+      <p>Os dados foram carregados via CSV e tratados em JavaScript, sem nenhuma alteração em seu documento. Durante a execução, foram feitas validações para lidar com valores inconsistentes e garantir que todos os dados fossem convertidos corretamente para o uso dos gráficos.</p>
+
+      <p>Para a visualização, foi utilizada a biblioteca Chart.js, permitindo a criação de três gráficos: evolução da temperatura global ao longo dos anos, comparação entre os anos mais quentes e detalhamento das variações mensais. Como diferencial, foi implementado um filtro interativo por ano, que utiliza os gráficos para exibir informações específicas conforme a seleção do usuário.</p>
+
+    </div>
+
+
+  </body>
+</html>
